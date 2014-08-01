@@ -27,5 +27,5 @@ filterPalindrome [] = []
 filterPalindrome xs = filter isPalindrome xs
 
 findLargestPalindrome :: Int -> Int -> Int
-findLargestPalindrome a b = last $ filter isPalindrome $
+findLargestPalindrome a b = maximum $ filter isPalindrome $
                             map (uncurry (*)) [(x, y) | x <- [a..b], y <- [x..b]]
