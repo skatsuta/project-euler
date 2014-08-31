@@ -1,4 +1,6 @@
-import Prime
+import Data.Numbers.Primes
 
 main :: IO ()
-main = print $ last $ primeFactors 600851475143
+main = do
+  let num = 600851475143 :: Integer
+  print $ last $ primeFactors num
